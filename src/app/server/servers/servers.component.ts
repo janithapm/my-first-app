@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 export class ServersComponent {
    id:number = 0;
    allowNewServer:boolean= false;
+   serverCreated:boolean = false;
    serverCreationStatus:string = "no server created";
    serverName:string ="";
 
@@ -25,6 +26,7 @@ export class ServersComponent {
 
    onCreateServer() {
     this.serverCreationStatus = "server was created";
+    this.serverCreated = true;
     this.id++;
    }
 
